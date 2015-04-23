@@ -1,0 +1,124 @@
+﻿@model WebAp.ModelsView.BuildingPage
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Buildings.FirstOrDefault().District)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Buildings.FirstOrDefault().Street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Buildings.FirstOrDefault().City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Buildings.FirstOrDefault().PostCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Buildings.FirstOrDefault().FlatCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Buildings.FirstOrDefault().BuildingNumber)
+        </th>
+        <th></th>
+    </tr>
+@foreach (var item in Model.Buildings) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.District)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Street)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlatCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuildingNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BuildingID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BuildingID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BuildingID })
+        </td>
+    </tr>
+}
+</table>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.FlatNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.Password)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model.Clients)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlatNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ClientID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ClientID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ClientID })
+            </td>
+        </tr>
+    }
+</table>
+
+@{
+    var n = from a in Model.Clients where a.ClientID == 1 select a;
+
+    var ss = from a in Model.Clients select a;
+    
+    <h3>@n.FirstOrDefault().Name</h3>
+    
+    
+    <h3>@Model.Client.FlatNumber</h3>
+
+}

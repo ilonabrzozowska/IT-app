@@ -1,0 +1,112 @@
+﻿@model WebAp.ModelsView.HomePage
+
+
+@{
+    //int clientId;
+    //clientId = 1;
+}
+
+@*@Model.Clients.FirstOrDefault().ClientID = 1;*@
+
+
+@Html.ActionLink("Building", "Index", "Building")
+
+@*@Html.ActionLink("Buildings", "Index", "Buildings")*@
+
+
+    @{
+        ViewBag.Title = "Home Page";
+        }
+<h2>Index</h2>
+
+    @*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Buildings.FirstOrDefault().District)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buildings.FirstOrDefault().Street)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buildings.FirstOrDefault().City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buildings.FirstOrDefault().PostCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buildings.FirstOrDefault().FlatCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buildings.FirstOrDefault().BuildingNumber)
+            </th>
+            <th></th>
+        </tr>*@
+
+        @*<tr>
+            <td>
+                @Html.Display(Model.Buildings.FirstOrDefault().District)
+            </td>
+        </tr>*@
+
+
+        @*@foreach (var item in Model.Buildings)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.District)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Street)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FlatCount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BuildingNumber)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.BuildingID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.BuildingID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.BuildingID })
+                </td>
+            </tr>
+        }*@
+
+    @*</table>*@
+
+
+
+    @*try { 
+        
+     
+        
+    var a = from f in Model.Buildings where f.BuildingID == 1 select f;
+    if (a == null)
+    {
+        <h3>null</h3>
+    }
+    else
+    {
+        <h3>@a.FirstOrDefault().City</h3>
+    }
+    }
+    catch
+    {
+        <h2>error</h2>
+    }*@
+    
+
+
+
+
+
+
