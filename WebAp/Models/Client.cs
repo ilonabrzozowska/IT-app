@@ -41,5 +41,8 @@ namespace WebAp.Models
         [DataMember]
         public virtual ICollection<Bill> Bills { get; set; }
 
+        [DataMember]
+        public virtual ICollection<Message> Messages { get; set; }
+
     }
 }
