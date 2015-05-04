@@ -18,6 +18,7 @@ namespace WebAp.Repositories
                                 new RepositoryComponentInfo("Building", typeof(IBuildingRepository), typeof(BuildingRepository)),
                                 new RepositoryComponentInfo("Client", typeof(IClientRepository), typeof(ClientRepository)),
                                 new RepositoryComponentInfo("Bill", typeof(IBillRepository), typeof(BillRepository)),
+                                new RepositoryComponentInfo("Message", typeof(IMessageRepository), typeof(MessageRepository)),
                                 new RepositoryComponentInfo("Position", typeof(IPositionRepository), typeof(PositionRepository)),
                                 new RepositoryComponentInfo("Item", typeof(IItemRepository), typeof(ItemRepository)),
                                 new RepositoryComponentInfo("ItemDate", typeof(IItemDateRepository), typeof(ItemDateRepository)),

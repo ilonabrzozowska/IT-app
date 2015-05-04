@@ -172,6 +172,7 @@
     <Compile Include="IRepositories\IBuildingRepository.cs" />
     <Compile Include="IRepositories\IItemRepository.cs" />
     <Compile Include="IRepositories\IItemDateRepository.cs" />
+    <Compile Include="IRepositories\IMessageRepository.cs" />
     <Compile Include="IRepositories\IPositionRepository.cs" />
     <Compile Include="IRepositories\IRepository.cs" />
     <Compile Include="IRepositories\IClientRepository.cs" />

@@ -21,6 +21,7 @@ namespace WebAp.Models
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Building> Buildings { get; set; }
         public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<Message> Messages { get; set; }
         public virtual DbSet<Bill> Bills { get; set; }
         public virtual DbSet<Position> Positions { get; set; }
         public virtual DbSet<Item> Items { get; set; }
