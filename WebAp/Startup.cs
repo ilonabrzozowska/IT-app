@@ -1,7 +1,7 @@
 ﻿using Microsoft.Owin;
 using Owin;
 using System.Data.Entity;
-using WebAp.Models;
+using Service.Models;
 
 
 

@@ -15,6 +15,12 @@ namespace WebAp.Repositories
             this.dbSet = context.Set<Building>();
         }
 
+        public List<Building> GetAllBuildings1()
+        {
+            var query = from build in context.Buildings select build;
+            return query.ToList();
+        }
+
         public IEnumerable<Building> GetAllBuildings()
         {
             var query = from build in context.Buildings select build;

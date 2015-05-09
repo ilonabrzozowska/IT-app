@@ -19,7 +19,7 @@ namespace WebAp.Repositories
             this.dbSet = context.Set<Message>();
         }
 
-        IEnumerable<Message> GetAllMessages()
+        public IEnumerable<Message> GetAllMessages()
         {
             var query = from msg in context.Messages select msg;
             return query.ToList();

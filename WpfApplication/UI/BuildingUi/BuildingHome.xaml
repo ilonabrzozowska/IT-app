@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="WpfApplication.UI.BuildingUi.BuildingHome"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FlowDirection="LeftToRight" Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <DataGrid AutoGenerateColumns="False" Margin="0,10,5,10" HorizontalAlignment="Stretch" Name="dataGrid1" VerticalAlignment="Stretch"  ItemsSource="{Binding Path=BuildingList}" CanUserResizeColumns="True" CanUserSortColumns="True" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding BuildingID}"/>
+                <DataGridTextColumn Header="District" Binding="{Binding District}"/>
+                <DataGridTextColumn Header="Street" Binding="{Binding Street}"/>
+                <DataGridTextColumn Header="City" Binding="{Binding City}"/>
+                <DataGridTextColumn Header="Post Code" Binding="{Binding PostCode}"/>
+                <DataGridTextColumn Header="Flat Count" Binding="{Binding FlatCount}"/>
+            </DataGrid.Columns>
+            <!--<DataGrid.ContextMenu>
+                <ContextMenu>
+                   < <MenuItem Command="Delete" Click="MenuItemDelete_Click"></MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>-->
+        </DataGrid>
+        <WrapPanel Height="100" HorizontalAlignment="Stretch" Name="wrapPanel1" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0" UseLayoutRounding="True">
+            <Button Content="Add" Name="buttonAdd" Width="150" VerticalAlignment="Stretch" Height="100" Background="#FFB10000" />
+            <Button Content="Download" Background="#FFB10000" x:Name="Download" Width="150"  Height="100" VerticalAlignment="Stretch" />
+        </WrapPanel>
+    </Grid>
+</UserControl>

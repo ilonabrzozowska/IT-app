@@ -154,3 +154,5 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+*.mdf
+WebAp/App_Data/aspnet-WebAp-20150419124558_log.ldf
