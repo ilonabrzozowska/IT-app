@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace WebAp.Models
 {
-    public class WebApInitializer : DropCreateDatabaseIfModelChanges<WebApContext>
+    public class WebApInitializer : DropCreateDatabaseAlways<WebApContext>
     {
         private void AddCategory(WebApContext context, string categoryName)
         {
@@ -27,7 +27,7 @@ namespace WebAp.Models
                     City = city,
                     PostCode = postCode,
                     FlatCount = flatCount,
-                    BuildingNumber = buildingNumber                  
+                    BuildingNumber = buildingNumber
                 });
         }
 
@@ -46,6 +46,18 @@ namespace WebAp.Models
                 });
         }
 
+        private void AddBills(WebApContext context, string billId, string pesel, DateTime dateIssue)
+        {
+            context.Bills.Add(
+                new Bill()
+                {
+                    BillID = billId,
+                    PESEL = pesel,
+                    DateIssue = dateIssue,
+                });
+        }
+
+
         protected override void Seed(WebApContext context)
         {
             this.AddCategory(context, "Beverages");
@@ -62,11 +74,12 @@ namespace WebAp.Models
             this.AddBuilding(context, "krzyki", "gajowicka", "wroclaw", "23-232", "10", "2");
             this.AddBuilding(context, "krzyki", "gajowicka", "wroclaw", "23-232", "10", "3");
 
+
             this.AddClient(context, 1, "Jan", "Kowalski", "1", "123456789", "password", "email");
+            this.AddClient(context, 1, "Tomasz", "Cybulski", "2", "123456789", "password", "email");
+            this.AddClient(context, 1, "Michal", "Kot", "3", "403628495", "pass", "mail");
 
             context.SaveChanges();
         }
-
-
     }
 }

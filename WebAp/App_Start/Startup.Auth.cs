@@ -7,7 +7,7 @@ using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using System;
-using Service.Models;
+using WebAp.Models;
 
 namespace WebAp
 {

@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace Service.Models
 {
-    public class WebApInitializer : DropCreateDatabaseIfModelChanges<WebApContext>
+    public class WebApInitializer : DropCreateDatabaseAlways<WebApContext>
     {
         private void AddCategory(WebApContext context, string categoryName)
         {
@@ -63,6 +63,8 @@ namespace Service.Models
             this.AddBuilding(context, "krzyki", "gajowicka", "wroclaw", "23-232", "10", "3");
 
             this.AddClient(context, 1, "Jan", "Kowalski", "1", "123456789", "password", "email");
+            this.AddClient(context, 1, "Tomasz", "Cybulski", "2", "123456789", "password", "email");
+            this.AddClient(context, 2, "Name", "Surname", "4", "403628495", "pass", "mail");
 
             context.SaveChanges();
         }

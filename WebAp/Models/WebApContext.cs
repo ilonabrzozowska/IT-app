@@ -5,7 +5,8 @@ using System.Web;
 using System.Data.Entity;
 using System.Web.Optimization;
 using System.Web.Routing;
-using Service.Models;
+using WebAp.Models;
+//using Service.Models;
 using System.Configuration;
 
 namespace WebAp.Models
@@ -13,7 +14,7 @@ namespace WebAp.Models
     public class WebApContext : DbContext
     {
         public WebApContext()
-            : base(@"Data Source=(localdb)\ProjectsV12; Initial Catalog=WebAp;Integrated Security=true")
+            : base("DefaultConnection")
 		{
 			Database.SetInitializer<WebApContext>(new WebApInitializer());
 		}

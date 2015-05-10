@@ -6,7 +6,8 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Data.Entity;
-using Service.Models;
+//using Service.Models;
+using WebAp.Models;
 using System.Configuration;
 
 namespace WebAp

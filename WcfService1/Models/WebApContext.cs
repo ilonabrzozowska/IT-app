@@ -13,6 +13,7 @@ namespace Service.Models
     public class WebApContext : DbContext
     {
         public WebApContext()
+            //: base("DefaultConnection")
             : base(@"Data Source=(localdb)\ProjectsV12; Initial Catalog=WebAp;Integrated Security=true")
 		{
 			Database.SetInitializer<WebApContext>(new WebApInitializer());
