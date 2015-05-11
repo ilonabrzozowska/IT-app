@@ -18,12 +18,9 @@ namespace WebAp.Models
         public string Name { get; set; }
 
         [DataMember, Required]
-        public float Price { get; set; }
+        public float PricePerUnit { get; set; }
 
-        [DataMember]
-        public virtual ICollection<Position> Positions { get; set; }
-
-        [DataMember]
-        public virtual ICollection<ItemDate> ItemDates { get; set; }
+        [DataMember, Required]
+        public DateTime OccurDate { get; set; }
     }
 }
