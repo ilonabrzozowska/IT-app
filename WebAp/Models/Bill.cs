@@ -12,10 +12,10 @@ namespace WebAp.Models
     public class Bill
     {
         [DataMember, Key, Required]
-        public string BillID { get; set; }
+        public int BillID { get; set; }
 
-        [DataMember, StringLength(11), Required]
-        public string PESEL { get; set; }
+        [DataMember, Required]
+        public int ClientID { get; set; }
 
         [DataMember, Required]
         public DateTime DateIssue { get; set; }

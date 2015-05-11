@@ -10,11 +10,12 @@ namespace WebAp.Models
     {
         
 
-        private void AddBuilding(WebApContext context, string district, string street, string city, string postCode, string flatCount, string buildingNumber)
+        private void AddBuilding(WebApContext context, int buildingId, string district, string street, string city, string postCode, string flatCount, string buildingNumber)
         {
             context.Buildings.Add(
                 new Building()
                 {
+                    BuildingID = buildingId,
                     District = district,
                     Street = street,
                     City = city,
@@ -24,11 +25,12 @@ namespace WebAp.Models
                 });
         }
 
-        private void AddClient(WebApContext context, int buildingId, string name, string surname, string flatNumber, string phone, string password, string email)
+        private void AddClient(WebApContext context, int clientId, int buildingId, string name, string surname, string flatNumber, string phone, string password, string email)
         {
             context.Clients.Add(
                 new Client()
                 {
+                    ClientID = clientId,
                     BuildingID = buildingId,
                     Name = name,
                     Surname = surname,
@@ -39,14 +41,15 @@ namespace WebAp.Models
                 });
         }
 
-        private void AddBills(WebApContext context, string billId, string pesel, DateTime dateIssue)
+        private void AddBills(WebApContext context, int billId, int clientId, DateTime dateIssue)
         {
             context.Bills.Add(
                 new Bill()
                 {
                     BillID = billId,
-                    PESEL = pesel,
+                    ClientID = clientId,
                     DateIssue = dateIssue,
+               //     Positions = position,
                 });
         }
 
@@ -89,18 +92,18 @@ namespace WebAp.Models
 
         protected override void Seed(WebApContext context)
         {
-            this.AddBuilding(context, "krzyki", "gajowicka", "wroclaw", "23-232", "10", "1");
-            this.AddBuilding(context, "krzyki", "gajowicka", "wroclaw", "23-232", "10", "2");
-            this.AddBuilding(context, "krzyki", "gajowicka", "wroclaw", "23-232", "10", "3");
+            this.AddBuilding(context, 1, "krzyki", "gajowicka", "wroclaw", "23-232", "10", "1");
+            this.AddBuilding(context, 2, "krzyki", "gajowicka", "wroclaw", "23-232", "10", "2");
+            this.AddBuilding(context, 3, "krzyki", "gajowicka", "wroclaw", "23-232", "10", "3");
 
 
-            this.AddClient(context, 1, "Jan", "Kowalski", "1", "123456789", "password", "email");
-            this.AddClient(context, 1, "Tomasz", "Cybulski", "2", "123456789", "password", "email");
-            this.AddClient(context, 1, "Michal", "Kot", "3", "403628495", "pass", "mail");
+            this.AddClient(context, 1, 1, "Jan", "Kowalski", "1", "123456789", "password", "email");
+            this.AddClient(context, 2, 1, "Tomasz", "Cybulski", "2", "123456789", "password", "email");
+            this.AddClient(context, 3, 1, "Michal", "Kot", "3", "403628495", "pass", "mail");
 
-            this.AddBills(context, "1", "1234", DateTime.Parse("2015-03-05"));
-            this.AddBills(context, "2", "6543", DateTime.Parse("2015-04-05"));
-            this.AddBills(context, "3", "8674", DateTime.Parse("2015-05-05"));
+            this.AddBills(context, 1, 1, DateTime.Parse("2015-03-05"));
+            this.AddBills(context, 2, 1, DateTime.Parse("2015-04-05"));
+            this.AddBills(context, 3, 1, DateTime.Parse("2015-05-05"));
 
             this.AddItems(context, 1, "water", 100);
             this.AddItems(context, 2, "gas", 90);
