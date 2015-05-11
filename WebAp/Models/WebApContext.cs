@@ -18,8 +18,6 @@ namespace WebAp.Models
 		{
 			Database.SetInitializer<WebApContext>(new WebApInitializer());
 		}
-        public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Building> Buildings { get; set; }
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<Message> Messages { get; set; }

@@ -55,22 +55,15 @@ namespace WebAp.Repositories
             return build;
         }
 
-        //public IEnumerable<HomeClient> GetHomeClient()
-        //{
-        //    List<HomeClient> data = new List<HomeClient>();
-
-        //    var query = from pre in context.Clients
-        //                join usr in context.Clients on pre.ClientID equals usr.ClientID
-        //                select new
-        //                {
-        //                    pre,
-        //                    usr,
-        //                };
-
-            
-        //    return data;
-
-        //}
+        public BillPage GetBillPageByClient(Client clientId)
+        {
+            RepositoryFactory factory = new RepositoryFactory(context);
+            BillPage bill = new BillPage();
+            bill.Buildings = factory.Create<IBuildingRepository>().GetAll();
+            bill.Clients = factory.Create<IClientRepository>().GetAllClients();
+            bill.Client = clientId;
+            return bill;
+        }
 
     }
 }
