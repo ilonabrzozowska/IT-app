@@ -20,10 +20,13 @@ namespace WebAp.Models
         [DataMember, Required]
         public DateTime DateIssue { get; set; }
 
-        [DataMember]
-        public virtual Client Client { get; set; }
+        [DataMember, Required]
+        public float Quantity { get; set; }
 
-        [DataMember]
-        public virtual ICollection<Position> Positions { get; set; }
+        [DataMember, Required]
+        public int ItemId { get; set; }
+
+        [DataMember, Required]
+        public DateTime PayDate { get; set; }
     }
 }
