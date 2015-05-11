@@ -3,3 +3,11 @@
 
 <h2>Bill Page</h2>
 
+
+@{
+    var f = from a in Model.Bills where a.ClientID == Model.Client.ClientID select a;
+}
+
+<p>
+    @f.FirstOrDefault().ClientID
+</p>

@@ -18,7 +18,5 @@ namespace WebAp.IRepositories
         BuildingPage GetBuildingPageByClient(Client clientId);
         BillPage GetBillPageByClient(Client clientId);
 
-       // IEnumerable<HomeClient> GetHomeClient();
-
     }
 }

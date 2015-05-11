@@ -41,7 +41,7 @@ namespace WebAp.Models
                 });
         }
 
-        private void AddBills(WebApContext context, int billId, int clientId, DateTime dateIssue)
+        private void AddBills(WebApContext context, int billId, int clientId, DateTime dateIssue, float quantity, int itemId, DateTime payDate)
         {
             context.Bills.Add(
                 new Bill()
@@ -49,43 +49,21 @@ namespace WebAp.Models
                     BillID = billId,
                     ClientID = clientId,
                     DateIssue = dateIssue,
-               //     Positions = position,
+                    Quantity = quantity,
+                    ItemId = itemId,
+                    PayDate = payDate,
                 });
         }
 
-        private void AddItems(WebApContext context, int itemId, string name, float price)
+        private void AddItems(WebApContext context, int itemId, string name, float pricePerUnit, DateTime occurDate)
         {
             context.Items.Add(
                 new Item()
                 {
                     ItemID = itemId,
                     Name = name,
-                    Price = price,
-                });
-        }
-
-        private void AddItemDates(WebApContext context, int itemDateId, int itemId, DateTime from, DateTime to)
-        {
-            context.ItemDates.Add(
-                new ItemDate()
-                {
-                    ItemDateID = itemDateId,
-                    ItemID = itemId,
-                    From = from,
-                    To = to,
-                });
-        }
-
-        private void AddPositions(WebApContext context, int positionId, int billId, int ItemId, int quantity, DateTime datePay)
-        {
-            context.Positions.Add(
-                new Position()
-                {
-                    PositionID = positionId,
-                    BillID = billId,
-                    ItemID = ItemId,
-                    Quantity = quantity,
-                    DatePay = datePay,
+                    PricePerUnit = pricePerUnit,
+                    OccurDate = occurDate,
                 });
         }
 
@@ -101,21 +79,14 @@ namespace WebAp.Models
             this.AddClient(context, 2, 1, "Tomasz", "Cybulski", "2", "123456789", "password", "email");
             this.AddClient(context, 3, 1, "Michal", "Kot", "3", "403628495", "pass", "mail");
 
-            this.AddBills(context, 1, 1, DateTime.Parse("2015-03-05"));
-            this.AddBills(context, 2, 1, DateTime.Parse("2015-04-05"));
-            this.AddBills(context, 3, 1, DateTime.Parse("2015-05-05"));
+            this.AddBills(context, 1, 1, DateTime.Parse("2015-03-05"), 100, 1, DateTime.Parse("2015-03-25"));
+            this.AddBills(context, 2, 1, DateTime.Parse("2015-04-05"), 90, 2, DateTime.Parse("2015-04-25"));
+            this.AddBills(context, 3, 1, DateTime.Parse("2015-05-05"), 80, 3, DateTime.Parse("2015-05-25"));
 
-            this.AddItems(context, 1, "water", 100);
-            this.AddItems(context, 2, "gas", 90);
-            this.AddItems(context, 3, "rent", 400);
+            this.AddItems(context, 1, "water", 100, DateTime.Parse("2015-03"));
+            this.AddItems(context, 2, "gas", 90, DateTime.Parse("2015-04"));
+            this.AddItems(context, 3, "rent", 400, DateTime.Parse("2015-05"));
 
-            this.AddItemDates(context, 1, 1, DateTime.Parse("2015-03-05"), DateTime.Parse("2015-03-15"));
-            this.AddItemDates(context, 2, 2, DateTime.Parse("2015-04-05"), DateTime.Parse("2015-04-15"));
-            this.AddItemDates(context, 3, 3, DateTime.Parse("2015-05-05"), DateTime.Parse("2015-05-15"));
-
-            this.AddPositions(context, 1, 1, 1, 490, DateTime.Parse("2015-03-15"));
-            this.AddPositions(context, 2, 2, 2, 490, DateTime.Parse("2015-04-15"));
-            this.AddPositions(context, 3, 3, 3, 490, DateTime.Parse("2015-05-15"));
 
             context.SaveChanges();
         }

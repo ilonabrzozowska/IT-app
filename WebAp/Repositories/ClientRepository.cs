@@ -62,6 +62,8 @@ namespace WebAp.Repositories
             bill.Buildings = factory.Create<IBuildingRepository>().GetAll();
             bill.Clients = factory.Create<IClientRepository>().GetAllClients();
             bill.Client = clientId;
+            bill.Bills = factory.Create<IBillRepository>().GetAll();
+            bill.Items = factory.Create<IItemRepository>().GetAll();
             return bill;
         }
 
