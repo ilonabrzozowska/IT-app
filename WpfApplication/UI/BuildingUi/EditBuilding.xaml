@@ -6,31 +6,31 @@
         <Rectangle  HorizontalAlignment="Stretch" Margin="0,0,0,0" x:Name="rectangle" Fill="Black"  Opacity="0.5" VerticalAlignment="Stretch" />
         <StackPanel Height="450" HorizontalAlignment="Center" Margin="12" Name="stackPanel1" VerticalAlignment="Stretch" Background="White" Width="494" >
             <StackPanel Orientation="Horizontal" Margin="20,20,0,20">
-                <Label Content="Dodaj Budynek" Height="62" Name="label1" FontSize="32" Width="431" HorizontalAlignment="Left"/>
+                <Label Content="Add new Building" Height="62" Name="label1" FontSize="32" Width="431" HorizontalAlignment="Left"/>
                 <Button ClipToBounds="False" Content="X" FlowDirection="RightToLeft" Height="25" Name="buttonClose"  Width="39" Click="buttonClose_Click" VerticalContentAlignment="Top" VerticalAlignment="Top" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
-                <Label Content="Dzielnica:" Height="31" Name="labelDistrict" Width="148" HorizontalAlignment="Left" />
+                <Label Content="District:" Height="31" Name="labelDistrict" Width="148" HorizontalAlignment="Left" />
                 <TextBox Height="23" Name="textBoxDistrict" Width="300" BorderBrush="#FF030303" Text="{Binding NewBuilding.District}" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
-                <Label Content="Ulica:" Height="31" Name="labelStreet" Width="148" HorizontalAlignment="Left" />
+                <Label Content="Street:" Height="31" Name="labelStreet" Width="148" HorizontalAlignment="Left" />
                 <TextBox Height="23" Name="textBoxStreet" Width="300" BorderBrush="#FF030303" Text="{Binding NewBuilding.Street}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
-                <Label Content="Miejscowość:" Height="31" Name="labelCity" Width="148" HorizontalAlignment="Left" />
+                <Label Content="City:" Height="31" Name="labelCity" Width="148" HorizontalAlignment="Left" />
                 <TextBox Height="23" Name="textBox" Width="300" BorderBrush="#FF030303" Text="{Binding NewBuilding.City}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
-                <Label Content="Kod pocztowy:" Height="31" Name="labelPostCode" Width="148" HorizontalAlignment="Left" />
+                <Label Content="Post Code:" Height="31" Name="labelPostCode" Width="148" HorizontalAlignment="Left" />
                 <TextBox Height="23" Name="textBoxPostCode" Width="300" BorderBrush="#FF030303" Text="{Binding NewBuilding.PostCode}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
-                <Label Content="Liczba mieszkań:" Height="31" Name="labelFlatCount" Width="148" HorizontalAlignment="Left" />
+                <Label Content="Flat Count:" Height="31" Name="labelFlatCount" Width="148" HorizontalAlignment="Left" />
                 <TextBox Height="23" Name="textBoxFlatCount" Width="300" BorderBrush="#FF030303" Text="{Binding NewBuilding.FlatCount}"/>
             </StackPanel>
             <StackPanel VerticalAlignment="Stretch" Height="200" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Dodaj" Name="buttonOK" Width="136" Foreground="White" Background="#FF797979" FlowDirection="LeftToRight" VerticalContentAlignment="Stretch" VerticalAlignment="Bottom" Margin="15" Click="buttonOK_Click" />
+                <Button Content="Add" Name="buttonOK" Width="136" Foreground="White" Background="#FF797979" FlowDirection="LeftToRight" VerticalContentAlignment="Stretch" VerticalAlignment="Bottom" Margin="15" Click="buttonOK_Click" />
             </StackPanel>
         </StackPanel>
     </Grid>

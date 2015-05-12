@@ -31,7 +31,7 @@
         </DataGrid>
         <WrapPanel Height="100" HorizontalAlignment="Stretch" Name="wrapPanel1" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0" UseLayoutRounding="True">
             <Button Content="Add" Name="buttonAdd" Width="150" VerticalAlignment="Stretch" Height="100" Background="#FFB10000" />
-            <Button Content="Download" Background="#FFB10000" x:Name="Download" Width="150"  Height="100" VerticalAlignment="Stretch" />
+            <Button Content="Download" Background="#FFB10000" Name="Download" Width="150"  Height="100" VerticalAlignment="Stretch" />
         </WrapPanel>
     </Grid>
 </UserControl>

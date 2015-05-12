@@ -21,7 +21,6 @@ namespace WpfApplication.ModelViews.BuildingModelViews
         private Building selectedBuilding;
         private Building newBuilding;
         public List<Building> BuildingList
-
         //public BindingList<Building> BuildingList
         {
             get { return buildingList; }

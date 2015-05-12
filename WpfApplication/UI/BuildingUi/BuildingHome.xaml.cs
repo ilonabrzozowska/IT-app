@@ -46,10 +46,8 @@ namespace WpfApplication.UI.BuildingUi
         }
 
         private void Download_Click(object sender, RoutedEventArgs e)
-        {
+        {          
             modelView.GetBuildingList();
         }
-
-
     }
 }
