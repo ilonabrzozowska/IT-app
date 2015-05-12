@@ -52,6 +52,7 @@ namespace WebAp.Repositories
             build.Buildings = factory.Create<IBuildingRepository>().GetAll();
             build.Clients = factory.Create<IClientRepository>().GetAllClients();
             build.Client = clientId;
+            build.Messages = factory.Create<IMessageRepository>().GetAll();
             return build;
         }
 

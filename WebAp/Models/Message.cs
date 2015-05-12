@@ -20,8 +20,8 @@ namespace WebAp.Models
         [DataMember, Required]
         public DateTime DeliveryDate { get; set; }
 
-        [DataMember]
-        public virtual Client Client { get; set; }
+        [DataMember, Required]
+        public int ClientId { get; set; }
 
     }
 }

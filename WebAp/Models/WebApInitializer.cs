@@ -66,6 +66,19 @@ namespace WebAp.Models
                     OccurDate = occurDate,
                 });
         }
+        
+        private void AddMessage(WebApContext context, int messageId, string content, DateTime deliveryDate, int clientId) 
+        {
+            context.Messages.Add(
+                new Message()
+                {
+                    MessageID = messageId,
+                    Content = content,
+                    DeliveryDate = deliveryDate,
+                    ClientId = clientId,
+                });
+        }
+
 
 
         protected override void Seed(WebApContext context)
@@ -79,14 +92,15 @@ namespace WebAp.Models
             this.AddClient(context, 2, 1, "Tomasz", "Cybulski", "2", "123456789", "password", "email");
             this.AddClient(context, 3, 1, "Michal", "Kot", "3", "403628495", "pass", "mail");
 
-            this.AddBills(context, 1, 1, DateTime.Parse("2015-03-05"), 100, 1, DateTime.Parse("2015-03-25"));
-            this.AddBills(context, 2, 1, DateTime.Parse("2015-04-05"), 90, 2, DateTime.Parse("2015-04-25"));
-            this.AddBills(context, 3, 1, DateTime.Parse("2015-05-05"), 80, 3, DateTime.Parse("2015-05-25"));
+            this.AddBills(context, 1, 1, DateTime.Parse("2015-03-05"), 25, 1, DateTime.Parse("2015-03-25"));
+            this.AddBills(context, 2, 1, DateTime.Parse("2015-03-05"), 55, 2, DateTime.Parse("2015-03-25"));
+            this.AddBills(context, 3, 1, DateTime.Parse("2015-03-05"), 1, 3, DateTime.Parse("2015-03-25"));
 
-            this.AddItems(context, 1, "water", 100, DateTime.Parse("2015-03"));
-            this.AddItems(context, 2, "gas", 90, DateTime.Parse("2015-04"));
-            this.AddItems(context, 3, "rent", 400, DateTime.Parse("2015-05"));
+            this.AddItems(context, 1, "water", 5, DateTime.Parse("2015-03"));
+            this.AddItems(context, 2, "gas", 2, DateTime.Parse("2015-04"));
+            this.AddItems(context, 3, "rent", 350, DateTime.Parse("2015-05"));
 
+            this.AddMessage(context, 1, "New message!", DateTime.Parse("2015-05-12"), 1);
 
             context.SaveChanges();
         }

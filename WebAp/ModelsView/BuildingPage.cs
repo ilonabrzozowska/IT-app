@@ -16,6 +16,7 @@ namespace WebAp.ModelsView
         public IEnumerable<Client> Clients { get; set; }
         public IEnumerable<Bill> Bills { get; set; }
         public IEnumerable<Item> Items { get; set; }
+        public IEnumerable<Message> Messages { get; set; }
 
     }
 }

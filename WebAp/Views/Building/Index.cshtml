@@ -48,12 +48,7 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.BuildingNumber)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BuildingID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BuildingID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BuildingID })
-        </td>
+        </td>       
     </tr>
 }
 </table>
@@ -102,24 +97,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Password)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ClientID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ClientID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ClientID })
-            </td>
         </tr>
     }
 </table>
 
 @{
-    var n = from a in Model.Clients where a.ClientID == 1 select a;
-
-    var ss = from a in Model.Clients select a;
-    
-    <h3>@n.FirstOrDefault().Surname</h3>
-        
-    <h3>@Model.Client.FlatNumber</h3>
-    
-   
-    
+    var message = from a in Model.Messages where a.ClientId == Model.Client.ClientID select a;
 }
+<p>
+    @message.FirstOrDefault().Content
+</p>
