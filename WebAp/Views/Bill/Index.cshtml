@@ -1,8 +1,6 @@
 ﻿@model WebAp.ModelsView.BillPage
 
-
 <h2>Bill Page for @Model.Client.Name @Model.Client.Surname</h2>
-
 
 @{
     var bills = from bill in Model.Bills where bill.ClientID == Model.Client.ClientID orderby bill.DateIssue select bill;
@@ -10,7 +8,6 @@
 
 <table style="width: 100%;">
     <thead>
-        @{bills = from bill in bills orderby bill.Quantity select bill;}
         <tr>
             <th>Bill ID</th>
             <th>Item name</th>
