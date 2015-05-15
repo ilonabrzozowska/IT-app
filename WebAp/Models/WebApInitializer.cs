@@ -95,6 +95,12 @@ namespace WebAp.Models
             this.AddBills(context, 1, 1, DateTime.Parse("2015-03-05"), 25, 1, DateTime.Parse("2015-03-25"));
             this.AddBills(context, 2, 1, DateTime.Parse("2015-03-05"), 55, 2, DateTime.Parse("2015-03-25"));
             this.AddBills(context, 3, 1, DateTime.Parse("2015-03-05"), 1, 3, DateTime.Parse("2015-03-25"));
+            this.AddBills(context, 4, 1, DateTime.Parse("2015-04-05"), 25, 1, DateTime.Parse("2015-04-25"));
+            this.AddBills(context, 5, 1, DateTime.Parse("2015-04-05"), 55, 2, DateTime.Parse("2015-04-25"));
+            this.AddBills(context, 6, 1, DateTime.Parse("2015-04-05"), 1, 3, DateTime.Parse("2015-04-25"));
+            this.AddBills(context, 7, 1, DateTime.Parse("2015-05-05"), 25, 1, DateTime.Parse("2015-05-25"));
+            this.AddBills(context, 8, 1, DateTime.Parse("2015-05-05"), 55, 2, DateTime.Parse("2015-05-25"));
+            this.AddBills(context, 9, 1, DateTime.Parse("2015-05-05"), 1, 3, DateTime.Parse("2015-05-25"));
 
             this.AddItems(context, 1, "water", 5, DateTime.Parse("2015-03"));
             this.AddItems(context, 2, "gas", 2, DateTime.Parse("2015-04"));

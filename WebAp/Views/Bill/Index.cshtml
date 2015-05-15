@@ -1,13 +1,42 @@
 ﻿@model WebAp.ModelsView.BillPage
 
 
-<h2>Bill Page</h2>
+<h2>Bill Page for @Model.Client.Name @Model.Client.Surname</h2>
 
 
 @{
-    var f = from a in Model.Bills where a.ClientID == Model.Client.ClientID select a;
+    var bills = from bill in Model.Bills where bill.ClientID == Model.Client.ClientID orderby bill.DateIssue select bill;
 }
 
-<p>
-    @f.FirstOrDefault().ClientID
-</p>
+<table style="width: 100%;">
+    <thead>
+        @{bills = from bill in bills orderby bill.Quantity select bill;}
+        <tr>
+            <th>Bill ID</th>
+            <th>Item name</th>
+            <th>Quantity</th>
+            <th>Price per unit</th>
+            <th>Total price</th>
+            <th>Date Issue</th>
+            <th>Pay Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var bill in bills)
+            {
+                var itemOnBill = (from item in Model.Items where item.ItemID == bill.ItemId select item).FirstOrDefault();
+                var totalPrice = @bill.Quantity * @itemOnBill.PricePerUnit;
+                <tr>
+                    <td>@bill.BillID</td>
+                    <td>@itemOnBill.Name</td>
+                    <td>@bill.Quantity</td>
+                    <td>@itemOnBill.PricePerUnit</td>
+                    <td>@totalPrice</td>
+                    <td>@bill.DateIssue.ToString("d")</td>
+                    <td>@bill.PayDate.ToString("d")</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
