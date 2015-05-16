@@ -1,39 +1,123 @@
 ﻿@model WebAp.ModelsView.BillPage
 
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/sorttable.js"></script>
+
 <h2>Bill Page for @Model.Client.Name @Model.Client.Surname</h2>
 
 @{
     var bills = from bill in Model.Bills where bill.ClientID == Model.Client.ClientID orderby bill.DateIssue select bill;
 }
 
-<table style="width: 100%;">
-    <thead>
-        <tr>
-            <th>Bill ID</th>
-            <th>Item name</th>
-            <th>Quantity</th>
-            <th>Price per unit</th>
-            <th>Total price</th>
-            <th>Date Issue</th>
-            <th>Pay Date</th>
-        </tr>
-    </thead>
-    <tbody>
-        @{
-            foreach (var bill in bills)
+@{
+    int startYear = 2000, endYear = 2020;
+    int january = 1, december = 12;
+
+    for (int year = startYear; year <= endYear; year++) {
+        for (int month = january; month <= december; month++)
+        {
+            var currentMonthBills = from bill in bills
+                                    where bill.DateIssue.Year == year && bill.DateIssue.Month == month
+                                    select bill;
+            if (currentMonthBills.ToArray().Length > 0)
             {
-                var itemOnBill = (from item in Model.Items where item.ItemID == bill.ItemId select item).FirstOrDefault();
-                var totalPrice = @bill.Quantity * @itemOnBill.PricePerUnit;
-                <tr>
-                    <td>@bill.BillID</td>
-                    <td>@itemOnBill.Name</td>
-                    <td>@bill.Quantity</td>
-                    <td>@itemOnBill.PricePerUnit</td>
-                    <td>@totalPrice</td>
-                    <td>@bill.DateIssue.ToString("d")</td>
-                    <td>@bill.PayDate.ToString("d")</td>
-                </tr>
+                <div class="periodContainer">
+                    <p class="period">Bills for @month.@year</p>
+                    <table class="billTable sortable">
+                        <thead>
+                            <tr>
+                                <th>Bill ID</th>
+                                <th>Item name</th>
+                                <th>Quantity</th>
+                                <th>Price per unit</th>
+                                <th>Total price</th>
+                                <th>Date Issue</th>
+                                <th>Pay Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                foreach (var bill in currentMonthBills)
+                                {
+                                    var itemOnBill = (from item in Model.Items
+                                                      where item.ItemID == bill.ItemId
+                                                      select item)
+                                                      .FirstOrDefault();
+                                    var totalPrice = @bill.Quantity * @itemOnBill.PricePerUnit;
+                                    <tr>
+                                        <td>@bill.BillID</td>
+                                        <td>@itemOnBill.Name</td>
+                                        <td>@bill.Quantity</td>
+                                        <td>@itemOnBill.PricePerUnit</td>
+                                        <td>@totalPrice</td>
+                                        <td>@bill.DateIssue.ToString("d")</td>
+                                        <td>@bill.PayDate.ToString("d")</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
             }
         }
-    </tbody>
-</table>
+    }
+
+    <div class="periodContainer">
+        <p class="period">All bills</p>
+        <table class="billTable sortable" style="width: 100%;">
+            <thead>
+                <tr>
+                    <th>Bill ID</th>
+                    <th>Item name</th>
+                    <th>Quantity</th>
+                    <th>Price per unit</th>
+                    <th>Total price</th>
+                    <th>Date Issue</th>
+                    <th>Pay Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var bill in bills)
+                    {
+                        var itemOnBill = (from item in Model.Items
+                                          where item.ItemID == bill.ItemId
+                                          select item)
+                                          .FirstOrDefault();
+                        var totalPrice = @bill.Quantity * @itemOnBill.PricePerUnit;
+                        <tr>
+                            <td>@bill.BillID</td>
+                            <td>@itemOnBill.Name</td>
+                            <td>@bill.Quantity</td>
+                            <td>@itemOnBill.PricePerUnit</td>
+                            <td>@totalPrice</td>
+                            <td>@bill.DateIssue.ToString("d")</td>
+                            <td>@bill.PayDate.ToString("d")</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+        $(".billTable").hide();
+        $(".period").click(function () {
+            $(this).siblings(".billTable").toggle();
+        })
+    })
+</script>
+
+<style>
+    .billTable {
+        width: 100%;
+    }
+
+    .period {
+        cursor: pointer;
+        width: 20%;
+    }
+
+</style>
