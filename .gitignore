@@ -156,3 +156,7 @@ $RECYCLE.BIN/
 .DS_Store
 *.mdf
 WebAp/App_Data/aspnet-WebAp-20150419124558_log.ldf
+CPM-report/Report.aux
+CPM-report/Report.toc
+CPM-report/Report.synctex.gz
+CPM-report/Report.out
