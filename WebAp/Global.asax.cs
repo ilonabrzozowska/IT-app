@@ -6,9 +6,8 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Data.Entity;
-//using Service.Models;
-using WebAp.Models;
 using System.Configuration;
+using DataLayer.Models;
 
 namespace WebAp
 {
@@ -22,11 +21,11 @@ namespace WebAp
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             if (bool.Parse(ConfigurationManager.AppSettings["CreateDatabase"]))
             {
-                Database.SetInitializer<WebApContext>(new WebApInitializer());
+                Database.SetInitializer<ThreeTierContext>(new ThreeTierInitializer());
             }
             else
             {
-                Database.SetInitializer<WebApContext>(null);
+                Database.SetInitializer<ThreeTierContext>(null);
             }
 
             //Database.SetInitializer<WebApContext>(new WebApInitializer());

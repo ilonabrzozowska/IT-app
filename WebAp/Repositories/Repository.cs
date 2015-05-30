@@ -1,25 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using WebAp.Models;
 using WebAp.IRepositories;
 using System.Data.Entity;
+using DataLayer.Models;
 
 namespace WebAp.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        protected WebApContext context;
+        protected ThreeTierContext context;
         protected DbSet<T> dbSet;
 
         public Repository()
         {
-            this.context = new WebApContext();
+            this.context = new ThreeTierContext();
             this.dbSet = context.Set<T>();
         }
 
-        public Repository(WebApContext context)
+        public Repository(ThreeTierContext context)
         {
             this.context = context;
             this.dbSet = context.Set<T>();

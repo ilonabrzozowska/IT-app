@@ -81,7 +81,6 @@
     <Compile Include="UI\BuildingUi\BuildingHome.xaml.cs">
       <DependentUpon>BuildingHome.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WcfService.cs" />
     <Page Include="UI\BuildingUi\EditBuilding.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

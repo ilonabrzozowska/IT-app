@@ -4,16 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Runtime.Serialization;
 using System.ComponentModel.DataAnnotations;
-using System.ServiceModel;
 using System.Collections;
 
-namespace WebAp.Models
+namespace DataLayer.Models
 {
     [DataContract]
     public class Building
     {
         [DataMember, Key, Required]
-        public int BuildingID { get; set; }
+        public int BuildingId { get; set; }
 
         [DataMember, MaxLength(127), Required]
         public string District { get; set; }

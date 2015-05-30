@@ -102,7 +102,7 @@
 </table>
 
 @{
-    var message = from a in Model.Messages where a.ClientId == Model.Client.ClientID select a;
+    var message = from a in Model.Messages where a.ClientId == Model.Client.ClientId select a;
 }
 <p>
     @message.FirstOrDefault().Content

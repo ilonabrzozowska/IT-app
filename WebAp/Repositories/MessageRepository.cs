@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using WebAp.Models;
 using WebAp.IRepositories;
-using WebAp.Repositories;
-using WebAp.Controllers;
-using WebAp.ModelsView;
-using System.Data.Entity;
+using DataLayer.Models;
 
 namespace WebAp.Repositories
 {
     public class MessageRepository : Repository<Message>, IMessageRepository
     {
-        public MessageRepository(WebApContext context)
+        public MessageRepository(ThreeTierContext context)
         {
             this.context = context;
             this.dbSet = context.Set<Message>();
@@ -27,7 +21,7 @@ namespace WebAp.Repositories
 
         public Message GetMessageById(int messageId)
         {
-            var query = from msg in context.Messages where msg.MessageID == messageId select msg;
+            var query = from msg in context.Messages where msg.MessageId == messageId select msg;
             return query.FirstOrDefault();
         }
     }

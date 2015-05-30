@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using WebAp.Models;
+﻿using System.Collections.Generic;
+using DataLayer.Models;
 using WebAp.IRepositories;
+using System.Linq;
 
 namespace WebAp.Repositories
 {
     public class BuildingRepository : Repository<Building>, IBuildingRepository
     {
-        public BuildingRepository(WebApContext context)
+        public BuildingRepository(ThreeTierContext context)
         {
             this.context = context;
             this.dbSet = context.Set<Building>();

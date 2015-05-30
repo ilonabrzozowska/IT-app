@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DataLayer.Models;
 using WebAp.Models;
 using WebAp.ModelsView;
 using WebAp.Repositories;
@@ -12,8 +13,8 @@ namespace WebAp.Controllers
 {
     public class BillController : Controller
     {
-        private WebApContext db = new WebApContext();
-        public RepositoryFactory RepositoryFactory = new RepositoryFactory(new WebApContext());
+        private ThreeTierContext db = new ThreeTierContext();
+        public RepositoryFactory RepositoryFactory = new RepositoryFactory(new ThreeTierContext());
 
 
         // GET: Bill

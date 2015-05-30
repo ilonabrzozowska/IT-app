@@ -41,13 +41,11 @@ namespace WpfApplication.UI.BuildingUi
 
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
-            modelView.AddNewBuilding();
           //  modelView.ShowNewBuilding();
         }
 
         private void Download_Click(object sender, RoutedEventArgs e)
         {          
-            modelView.GetBuildingList();
         }
     }
 }

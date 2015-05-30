@@ -6,7 +6,7 @@
 <h2>Bill Page for @Model.Client.Name @Model.Client.Surname</h2>
 
 @{
-    var bills = from bill in Model.Bills where bill.ClientID == Model.Client.ClientID orderby bill.DateIssue select bill;
+    var bills = from bill in Model.Bills where bill.ClientId == Model.Client.ClientId orderby bill.DateIssue select bill;
 }
 
 @{
@@ -40,12 +40,12 @@
                                 foreach (var bill in currentMonthBills)
                                 {
                                     var itemOnBill = (from item in Model.Items
-                                                      where item.ItemID == bill.ItemId
+                                                      where item.ItemId == bill.ItemId
                                                       select item)
                                                       .FirstOrDefault();
                                     var totalPrice = @bill.Quantity * @itemOnBill.PricePerUnit;
                                     <tr>
-                                        <td>@bill.BillID</td>
+                                        <td>@bill.BillId</td>
                                         <td>@itemOnBill.Name</td>
                                         <td>@bill.Quantity</td>
                                         <td>@itemOnBill.PricePerUnit</td>
@@ -81,12 +81,12 @@
                     foreach (var bill in bills)
                     {
                         var itemOnBill = (from item in Model.Items
-                                          where item.ItemID == bill.ItemId
+                                          where item.ItemId == bill.ItemId
                                           select item)
                                           .FirstOrDefault();
                         var totalPrice = @bill.Quantity * @itemOnBill.PricePerUnit;
                         <tr>
-                            <td>@bill.BillID</td>
+                            <td>@bill.BillId</td>
                             <td>@itemOnBill.Name</td>
                             <td>@bill.Quantity</td>
                             <td>@itemOnBill.PricePerUnit</td>

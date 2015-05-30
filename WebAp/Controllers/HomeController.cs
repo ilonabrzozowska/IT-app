@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using WebAp.ModelsView;
-using WebAp.Models;
-using WebAp.IRepositories;
-using WebAp.Repositories;
+﻿using System.Web.Mvc;
+using DataLayer.Models;
+
+
 
 namespace WebAp.Controllers
 {
     public class HomeController : Controller
     {
-        private WebApContext db = new WebApContext();
+        private ThreeTierContext db = new ThreeTierContext();
 
         public ActionResult Index()
         {

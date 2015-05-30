@@ -4,15 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Runtime.Serialization;
 using System.ComponentModel.DataAnnotations;
-using System.ServiceModel;
 
-namespace WebAp.Models
+namespace DataLayer.Models
 {
     [DataContract]
     public class Item
     {
         [DataMember, Key, Required]
-        public int ItemID { get; set; }
+        public int ItemId { get; set; }
 
         [DataMember, MaxLength(127), Required]
         public string Name { get; set; }

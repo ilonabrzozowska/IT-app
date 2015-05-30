@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using WebAp.Models;
+﻿using System.Collections.Generic;
 using WebAp.IRepositories;
-using WebAp.Repositories;
-using WebAp.Controllers;
 using WebAp.ModelsView;
-using System.Data.Entity;
+using DataLayer.Models;
+using System.Linq;
 
 
 namespace WebAp.Repositories
 {
     public class ClientRepository : Repository<Client>, IClientRepository
     {
-        public ClientRepository(WebApContext context)
+        public ClientRepository(ThreeTierContext context)
         {
             this.context = context;
             this.dbSet = context.Set<Client>();
@@ -28,7 +23,7 @@ namespace WebAp.Repositories
 
         public Client GetClientById(int clientId)
         {
-            var query = from usr in context.Clients where usr.ClientID == clientId select usr;
+            var query = from usr in context.Clients where usr.ClientId == clientId select usr;
             return query.FirstOrDefault();
         }
 

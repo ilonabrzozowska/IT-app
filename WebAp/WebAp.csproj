@@ -182,14 +182,7 @@
     <Compile Include="ModelsView\HomeClient.cs" />
     <Compile Include="ModelsView\HomePage.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Bill.cs" />
-    <Compile Include="Models\Building.cs" />
-    <Compile Include="Models\Client.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Item.cs" />
-    <Compile Include="Models\Message.cs" />
-    <Compile Include="Models\WebApContext.cs" />
-    <Compile Include="Models\WebApInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BillRepository.cs" />
     <Compile Include="Repositories\BuildingRepository.cs" />
@@ -224,7 +217,9 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\sorttable.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -268,9 +263,13 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WcfService1\Service.csproj">
-      <Project>{b741fce8-afbe-4efa-9075-df254f270f2f}</Project>
-      <Name>Service</Name>
+    <ProjectReference Include="..\..\ThreeTier\BusinessLayer\BusinessLayer.csproj">
+      <Project>{79cacae7-abf3-4c26-a501-e73bea4f5372}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThreeTier\DataLayer\DataLayer.csproj">
+      <Project>{7dbb50ae-1f70-4c52-96c8-1f8ff17627af}</Project>
+      <Name>DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

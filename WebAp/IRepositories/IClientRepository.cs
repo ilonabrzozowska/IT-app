@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using WebAp.Controllers;
-using WebAp.IRepositories;
-using WebAp.Models;
+﻿using System.Collections.Generic;
+using DataLayer.Models;
 using WebAp.ModelsView;
-using WebAp.Repositories;
 
 namespace WebAp.IRepositories
 {

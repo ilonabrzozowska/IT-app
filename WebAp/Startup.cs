@@ -1,6 +1,7 @@
 ﻿using Microsoft.Owin;
 using Owin;
 using System.Data.Entity;
+using DataLayer.Models;
 //using Service.Models;
 using WebAp.Models;
 
@@ -14,7 +15,7 @@ namespace WebAp
     {
         public void Configuration(IAppBuilder app)
         {
-            Database.SetInitializer<WebApContext>(new WebApInitializer());
+            Database.SetInitializer<ThreeTierContext>(new ThreeTierInitializer());
             //context.Database.Initialize(false);
             ConfigureAuth(app);
         }

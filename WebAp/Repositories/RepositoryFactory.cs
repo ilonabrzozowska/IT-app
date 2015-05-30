@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
+using DataLayer.Models;
 using WebAp.Models;
 using WebAp.IRepositories;
 using WebAp.Repositories;
@@ -20,8 +21,8 @@ namespace WebAp.Repositories
     {
         
         WebApRepositories repositories;
-        WebApContext db;
-        public RepositoryFactory(WebApContext dbContext)
+        ThreeTierContext db;
+        public RepositoryFactory(ThreeTierContext dbContext)
         {
             repositories = new WebApRepositories();
             this.db = dbContext;

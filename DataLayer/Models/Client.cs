@@ -4,15 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Runtime.Serialization;
 using System.ComponentModel.DataAnnotations;
-using System.ServiceModel;
 
-namespace WebAp.Models
+namespace DataLayer.Models
 {
     [DataContract]
     public class Client
     {
         [DataMember, Key, Required]
-        public int ClientID { get; set; }
+        public int ClientId { get; set; }
 
         [DataMember, MaxLength(32), Required]
         public string Password { get; set; }
@@ -30,7 +29,7 @@ namespace WebAp.Models
         public string FlatNumber { get; set; }
 
         [DataMember, Required]
-        public int BuildingID { get; set; }
+        public int BuildingId { get; set; }
 
         [DataMember, MaxLength(15)]
         public string Phone { get; set; }

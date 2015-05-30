@@ -4,18 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 
-namespace WebAp.Models
+namespace DataLayer.Models
 {
-    public class WebApInitializer : DropCreateDatabaseAlways<WebApContext>
+    public class ThreeTierInitializer : DropCreateDatabaseAlways<ThreeTierContext>
     {
-        
 
-        private void AddBuilding(WebApContext context, int buildingId, string district, string street, string city, string postCode, string flatCount, string buildingNumber)
+
+        private void AddBuilding(ThreeTierContext context, int buildingId, string district, string street, string city, string postCode, string flatCount, string buildingNumber)
         {
             context.Buildings.Add(
                 new Building()
                 {
-                    BuildingID = buildingId,
+                    BuildingId = buildingId,
                     District = district,
                     Street = street,
                     City = city,
@@ -25,13 +25,13 @@ namespace WebAp.Models
                 });
         }
 
-        private void AddClient(WebApContext context, int clientId, int buildingId, string name, string surname, string flatNumber, string phone, string password, string email)
+        private void AddClient(ThreeTierContext context, int clientId, int buildingId, string name, string surname, string flatNumber, string phone, string password, string email)
         {
             context.Clients.Add(
                 new Client()
                 {
-                    ClientID = clientId,
-                    BuildingID = buildingId,
+                    ClientId = clientId,
+                    BuildingId = buildingId,
                     Name = name,
                     Surname = surname,
                     FlatNumber = flatNumber,
@@ -41,13 +41,13 @@ namespace WebAp.Models
                 });
         }
 
-        private void AddBills(WebApContext context, int billId, int clientId, DateTime dateIssue, float quantity, int itemId, DateTime payDate)
+        private void AddBills(ThreeTierContext context, int billId, int clientId, DateTime dateIssue, float quantity, int itemId, DateTime payDate)
         {
             context.Bills.Add(
                 new Bill()
                 {
-                    BillID = billId,
-                    ClientID = clientId,
+                    BillId = billId,
+                    ClientId = clientId,
                     DateIssue = dateIssue,
                     Quantity = quantity,
                     ItemId = itemId,
@@ -55,24 +55,24 @@ namespace WebAp.Models
                 });
         }
 
-        private void AddItems(WebApContext context, int itemId, string name, float pricePerUnit, DateTime occurDate)
+        private void AddItems(ThreeTierContext context, int itemId, string name, float pricePerUnit, DateTime occurDate)
         {
             context.Items.Add(
                 new Item()
                 {
-                    ItemID = itemId,
+                    ItemId = itemId,
                     Name = name,
                     PricePerUnit = pricePerUnit,
                     OccurDate = occurDate,
                 });
         }
-        
-        private void AddMessage(WebApContext context, int messageId, string content, DateTime deliveryDate, int clientId) 
+
+        private void AddMessage(ThreeTierContext context, int messageId, string content, DateTime deliveryDate, int clientId)
         {
             context.Messages.Add(
                 new Message()
                 {
-                    MessageID = messageId,
+                    MessageId = messageId,
                     Content = content,
                     DeliveryDate = deliveryDate,
                     ClientId = clientId,
@@ -81,7 +81,7 @@ namespace WebAp.Models
 
 
 
-        protected override void Seed(WebApContext context)
+        protected override void Seed(ThreeTierContext context)
         {
             this.AddBuilding(context, 1, "krzyki", "gajowicka", "wroclaw", "23-232", "10", "1");
             this.AddBuilding(context, 2, "krzyki", "gajowicka", "wroclaw", "23-232", "10", "2");

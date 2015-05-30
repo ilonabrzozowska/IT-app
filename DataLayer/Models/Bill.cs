@@ -4,18 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Runtime.Serialization;
 using System.ComponentModel.DataAnnotations;
-using System.ServiceModel;
 
-namespace WebAp.Models
+namespace DataLayer.Models
 {
     [DataContract]
     public class Bill
     {
         [DataMember, Key, Required]
-        public int BillID { get; set; }
+        public int BillId { get; set; }
 
         [DataMember, Required]
-        public int ClientID { get; set; }
+        public int ClientId { get; set; }
 
         [DataMember, Required]
         public DateTime DateIssue { get; set; }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using WebAp.Models;
+﻿using System.Collections.Generic;
+using DataLayer.Models;
 
 namespace WebAp.IRepositories
 {

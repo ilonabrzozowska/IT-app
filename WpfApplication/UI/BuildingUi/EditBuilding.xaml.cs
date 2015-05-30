@@ -21,13 +21,7 @@ namespace WpfApplication.UI.BuildingUi
     {
         BuildingModelView modelView;
 
-        public EditBuilding(BuildingModelView modelView)
-        {
-            InitializeComponent();
-            this.modelView = modelView;
-            DataContext = this.modelView;
-            modelView.ResetEditValue();
-        }
+        
 
         private void buttonClose_Click(object sender, RoutedEventArgs e)
         {
@@ -36,7 +30,6 @@ namespace WpfApplication.UI.BuildingUi
 
         private void buttonOK_Click(object sender, RoutedEventArgs e)
         {
-            modelView.AddNewBuilding();
             this.Close();
         }
     }
