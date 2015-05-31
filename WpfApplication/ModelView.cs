@@ -4,16 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using Service;
-using Service.Models;
+using BusinessLayer;
+using DataLayer.Models;
+using WpfApplication.UI.BuildingUi;
 
 namespace WpfApplication
 {
     public class ModelView : INotifyPropertyChanged
     {
+    //    private BindingList<Building> _buildingList;
+        private List<Building> _buildingList; 
 
-      //  private OurService server;
-      
+        //public BindingList<Building> BuildingList
+        //{
+        //    get { return _buildingList; }
+        //    set { _buildingList = value; OnPropertyChanged("BuildingList"); }
+        //}
+        public List<Building> BuildingList
+        {
+            get { return _buildingList; }
+            set { _buildingList = value; OnPropertyChanged("BuildingList"); }
+        }
+
+        public void GetBuildingList()
+        {
+            BuildingList =  Service.GetAllBuildings();
+        }      
 
         #region PropertyNotification
         public event PropertyChangedEventHandler PropertyChanged;
@@ -29,16 +45,12 @@ namespace WpfApplication
 
         public ModelView()
         {
-
-
+            Service.GetAllBuildings();
         }
 
-        /// <summary>
-        /// Pobranie listy studentów
-        /// </summary>
+        
         public void GetList()
         {
-            //StudentList = server.GetStudents(); // Dane zostaną automatycznie zmienione w widoku dzięki bindowaniu
         }
 
        

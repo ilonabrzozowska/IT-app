@@ -14,10 +14,27 @@
             <RowDefinition Height="100" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
+        <DataGrid AutoGenerateColumns="False" Margin="0,10,5,10" HorizontalAlignment="Stretch" Name="client" VerticalAlignment="Stretch"  ItemsSource="{Binding Path=BuildingList}" CanUserResizeColumns="True" CanUserSortColumns="True" Grid.Row="1" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ClientId}"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Surname" Binding="{Binding Surname}"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Flat Number" Binding="{Binding FlatNumber}"/>
+                <DataGridTextColumn Header="Building ID" Binding="{Binding BuildingId}"/>
+                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"/>
+            </DataGrid.Columns>
+            <!--<DataGrid.ContextMenu>
+                <ContextMenu>
+                   < <MenuItem Command="Delete" Click="MenuItemDelete_Click"></MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>-->
+        </DataGrid>
+
+
         <WrapPanel Height="100" HorizontalAlignment="Stretch" Name="wrapPanel1" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0" UseLayoutRounding="True">
             <Button Content="Add" Name="buttonAdd" Width="150" VerticalAlignment="Stretch" Height="100" Background="#FFB10000" />
-            <Button Background="#FFB10000" Content="Download" x:Name="button" Width="150"  Height="100" VerticalAlignment="Stretch" />
+            <Button Background="#FFB10000" Content="Download" x:Name="buttonDownload" Width="150"  Height="100" VerticalAlignment="Stretch" Click="buttonDownload_Click"  />
         </WrapPanel>
     </Grid>
 </UserControl>

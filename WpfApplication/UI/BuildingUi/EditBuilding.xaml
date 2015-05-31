@@ -29,8 +29,12 @@
                 <Label Content="Flat Count:" Height="31" Name="labelFlatCount" Width="148" HorizontalAlignment="Left" />
                 <TextBox Height="23" Name="textBoxFlatCount" Width="300" BorderBrush="#FF030303" Text="{Binding NewBuilding.FlatCount}"/>
             </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                <Label Content="Building Number:" Height="31" Name="labelBuildingNumber" Width="148" HorizontalAlignment="Left" />
+                <TextBox Height="23" Name="textBoxBuildingNumber" Width="300" BorderBrush="#FF030303" Text="{Binding NewBuilding.BuildingNumber}"/>
+            </StackPanel>
             <StackPanel VerticalAlignment="Stretch" Height="200" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Add" Name="buttonOK" Width="136" Foreground="White" Background="#FF797979" FlowDirection="LeftToRight" VerticalContentAlignment="Stretch" VerticalAlignment="Bottom" Margin="15" Click="buttonOK_Click" />
+                <Button Content="Add" x:Name="buttonOK" Width="136" Foreground="White" Background="#FF797979" FlowDirection="LeftToRight" VerticalContentAlignment="Stretch" VerticalAlignment="Bottom" Margin="15,0,15,55" Click="buttonOK_Click" />
             </StackPanel>
         </StackPanel>
     </Grid>

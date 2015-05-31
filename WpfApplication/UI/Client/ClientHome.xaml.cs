@@ -28,5 +28,12 @@ namespace WpfApplication.UI.Client
         private void button_Click(object sender, RoutedEventArgs e)
         {
         }
+
+        private void buttonDownload_Click(object sender, RoutedEventArgs e)
+        {
+            client.ItemsSource = BusinessLayer.Service.GetAllUsers();
+        }
+
+        
     }
 }

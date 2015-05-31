@@ -24,7 +24,7 @@
             <Button Content="_" FlowDirection="LeftToRight" Width="30" Height="25" Name="buttonMini" Click="button1_Click" />
         </WrapPanel>
         <ContentControl Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Name="contentControl" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch">
-            <my:BuildingHome Grid.Column="1" Grid.Row="1" BorderBrush="#FFB73636" BorderThickness="1" />
+            <my:BuildingHome Grid.Column="1" Grid.Row="1" BorderBrush="#FFB73636" BorderThickness="1"  />
         </ContentControl>
     </Grid>
 </Window>
