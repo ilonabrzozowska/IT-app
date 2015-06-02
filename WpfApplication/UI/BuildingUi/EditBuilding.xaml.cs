@@ -44,7 +44,8 @@ namespace WpfApplication.UI.BuildingUi
             try
             {
                 sqlcon.Open();
-                string query = "insert into Buildings (District, Street, City, PostCode, FlatCount, BuildingNumber) values('" + this.textBoxDistrict.Text + "', '" + this.textBoxStreet.Text + "', '" + this.textBox.Text + "', '" + this.textBoxPostCode.Text + "', '" + this.textBoxFlatCount.Text + "', '" + this.textBoxBuildingNumber + "')";
+                string query = "insert into Buildings (District, Street, City, PostCode, FlatCount, BuildingNumber)" +
+                               " values('" + textBoxDistrict.Text + "', '" + textBoxStreet.Text + "', '" + textBox.Text + "', '" + textBoxPostCode.Text + "', '" + textBoxFlatCount.Text + "', '" + textBoxBuildingNumber.Text + "')";
                 SqlCommand createCommand = new SqlCommand(query, sqlcon);
                 createCommand.ExecuteNonQuery();
                 MessageBox.Show("Saved");

@@ -76,26 +76,34 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ModelView.cs" />
-    <Compile Include="UI\BuildingUi\EditBuilding.xaml.cs">
+    <Compile Include="ModelViews\ClientModelViews\ClientModelView.cs" />
+    <Compile Include="UI\BuildingUI\EditBuilding.xaml.cs">
       <DependentUpon>EditBuilding.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\Client\ClientHome.xaml.cs">
+    <Compile Include="UI\ClientUI\ClientHome.xaml.cs">
       <DependentUpon>ClientHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ClientUI\EditClient.xaml.cs">
+      <DependentUpon>EditClient.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\Home\HomeHome.xaml.cs">
       <DependentUpon>HomeHome.xaml</DependentUpon>
     </Compile>
     <Compile Include="ModelViews\BuildingModelViews\BuildingModelView.cs" />
-    <Compile Include="UI\BuildingUi\BuildingHome.xaml.cs">
+    <Compile Include="UI\BuildingUI\BuildingHome.xaml.cs">
       <DependentUpon>BuildingHome.xaml</DependentUpon>
     </Compile>
-    <Page Include="UI\BuildingUi\EditBuilding.xaml">
+    <Page Include="UI\BuildingUI\EditBuilding.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UI\Client\ClientHome.xaml">
+    <Page Include="UI\ClientUI\ClientHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ClientUI\EditClient.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UI\Home\HomeHome.xaml">
       <SubType>Designer</SubType>
@@ -117,7 +125,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UI\BuildingUi\BuildingHome.xaml">
+    <Page Include="UI\BuildingUI\BuildingHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

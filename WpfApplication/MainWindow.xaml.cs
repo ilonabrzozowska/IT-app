@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApplication.UI.BuildingUi;
 using WpfApplication.UI.Home;
-using WpfApplication.UI.Client;
+using WpfApplication.UI.ClientUI;
 using WpfApplication.ModelViews;
 
 namespace WpfApplication

@@ -24,11 +24,11 @@
                 <DataGridTextColumn Header="Flat Count" Binding="{Binding FlatCount}"/>
                 <DataGridTextColumn Header="Building Number" Binding="{Binding BuildingNumber}"/>
             </DataGrid.Columns>
-            <!--<DataGrid.ContextMenu>
+            <DataGrid.ContextMenu>
                 <ContextMenu>
-                   < <MenuItem Command="Delete" Click="MenuItemDelete_Click"></MenuItem>
+                   <MenuItem Command="Delete" Click="MenuItemDelete_Click"></MenuItem>
                 </ContextMenu>
-            </DataGrid.ContextMenu>-->
+            </DataGrid.ContextMenu>
         </DataGrid>
     
 

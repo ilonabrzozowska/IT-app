@@ -54,15 +54,17 @@ namespace WpfApplication.UI.BuildingUi
 
         private void Download_Click(object sender, RoutedEventArgs e)
         {
-          //  modelView.GetBuildingList();
             _buildingList = Service.GetAllBuildings();
             build.ItemsSource = Service.GetAllBuildings();
         }
 
-        
-
-      
-
-       
+        private void MenuItemDelete_Click(object sender, RoutedEventArgs e)
+        {
+            var menuItem = (MenuItem)sender;
+            var contextMenu = (ContextMenu)menuItem.Parent;
+            var item = (DataGrid)contextMenu.PlacementTarget;
+            var building = (Building)item.SelectedCells[0].Item;
+            modelView.DeleteBuilding(building);
+        }
     }
 }

@@ -76,13 +76,14 @@ namespace WpfApplication.ModelViews.BuildingModelViews
             NewBuilding = Service.AddBuilding(NewBuilding);
             if (NewBuilding.BuildingId != null)
             {
-
                 _buildingList.Add(NewBuilding);
-                //   BuildingList.Add(NewBuilding);
-                //  _buildingList.Add(NewBuilding);
             }
         }
 
-       
+
+        public void DeleteBuilding(Building building)
+        {
+            Service.DeleteBuilding(building);
+        }
     }
 }

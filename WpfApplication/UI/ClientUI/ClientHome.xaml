@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="WpfApplication.UI.Client.ClientHome"
+﻿<UserControl x:Class="WpfApplication.UI.ClientUI.ClientHome"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -24,16 +24,16 @@
                 <DataGridTextColumn Header="Building ID" Binding="{Binding BuildingId}"/>
                 <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"/>
             </DataGrid.Columns>
-            <!--<DataGrid.ContextMenu>
+            <DataGrid.ContextMenu>
                 <ContextMenu>
-                   < <MenuItem Command="Delete" Click="MenuItemDelete_Click"></MenuItem>
+                   <MenuItem Command="Delete" Click="MenuItemDelete_Click"></MenuItem>
                 </ContextMenu>
-            </DataGrid.ContextMenu>-->
+            </DataGrid.ContextMenu>
         </DataGrid>
 
 
         <WrapPanel Height="100" HorizontalAlignment="Stretch" Name="wrapPanel1" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0" UseLayoutRounding="True">
-            <Button Content="Add" Name="buttonAdd" Width="150" VerticalAlignment="Stretch" Height="100" Background="#FFB10000" />
+            <Button Content="Add" Name="buttonAdd" Width="150" VerticalAlignment="Stretch" Height="100" Background="#FFB10000" Click="buttonAdd_Click" />
             <Button Background="#FFB10000" Content="Download" x:Name="buttonDownload" Width="150"  Height="100" VerticalAlignment="Stretch" Click="buttonDownload_Click"  />
         </WrapPanel>
     </Grid>
