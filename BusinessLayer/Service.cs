@@ -13,7 +13,6 @@ namespace BusinessLayer
 {
     public class Service
     {
-
         public static List<Client> GetAllClients()
         {
             return Provider.GetAllClients();
@@ -42,6 +41,21 @@ namespace BusinessLayer
         public static bool DeleteBuilding(Building building)
         {
             return Provider.DeleteBuilding(building);
+        }
+
+        public static List<Bill> GetAllBills()
+        {
+            return Provider.GetAllBills();
+        }
+
+        public static Bill AddBill(Bill newBill)
+        {
+            return Provider.AddBill(newBill);
+        }
+
+        public static bool DeleteBill(Bill bill)
+        {
+            return Provider.DeleteBill(bill);
         }
 
         #region PropertyNotification

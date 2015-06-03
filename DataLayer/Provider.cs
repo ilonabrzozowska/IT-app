@@ -76,6 +76,33 @@ namespace DataLayer
             }
         }
 
+        public static List<Bill> GetAllBills()
+        {
+            List<Bill> lst = null;
+            lst = (from a in Db.Table.Bills select a).ToList();
+            return lst;
+        }
+
+        public static Bill AddBill(Bill newBill)
+        {
+            Db.Table.Bills.Add(newBill);
+            Db.Table.SaveChanges();
+            Submit();
+            return newBill;
+        }
+
+        public static bool DeleteBill(Bill bill)
+        {
+            Db.Table.Bills.Remove(bill);
+            if (Submit())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         public static bool Submit()
         {

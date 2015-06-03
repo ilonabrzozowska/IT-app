@@ -51,6 +51,11 @@ namespace WpfApplication.UI.BillsUI
         private void buttonPreviousMonths_Click(object sender, RoutedEventArgs e)
         {
             // display list of clients from previous months with status of payment (to see if everyone paid)
-        }      
+        }
+
+        private void buttonAddBill_Click(object sender, RoutedEventArgs e)
+        {
+            modelView.ShowNewBill();
+        }
     }
 }

@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             mc:Ignorable="d" Height="303" Width="480">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FlowDirection="LeftToRight" Margin="5">
         
         <Grid.RowDefinitions>
@@ -25,6 +24,7 @@
         <WrapPanel Height="100" HorizontalAlignment="Stretch" Name="wrapPanel1" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0" UseLayoutRounding="True">
             <Button Content="Actual Month" Name="buttonActualMonth" Width="150" VerticalAlignment="Stretch" Height="100" Background="#FFB10000" Click="buttonActualMonth_Click" />
             <Button Background="#FFB10000" Content="Previous Months" x:Name="buttonPreviousMonths" Width="150"  Height="100" VerticalAlignment="Stretch" Click="buttonPreviousMonths_Click"  />
+            <Button Content="Add bill" Name="buttonAddBill" Click="buttonAddBill_Click" Width="150" VerticalAlignment="Stretch" Height="100" Background="#FFB10000"/>
         </WrapPanel>
     </Grid>
 </UserControl>

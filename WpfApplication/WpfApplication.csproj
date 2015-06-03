@@ -81,6 +81,9 @@
     <Compile Include="UI\BillsUI\BillsHome.xaml.cs">
       <DependentUpon>BillsHome.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\BillsUI\EditBill.xaml.cs">
+      <DependentUpon>EditBill.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\BuildingUI\EditBuilding.xaml.cs">
       <DependentUpon>EditBuilding.xaml</DependentUpon>
     </Compile>
@@ -100,6 +103,10 @@
     <Page Include="UI\BillsUI\BillsHome.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\BillsUI\EditBill.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\BuildingUI\EditBuilding.xaml">
       <SubType>Designer</SubType>
