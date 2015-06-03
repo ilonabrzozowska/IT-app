@@ -63,5 +63,17 @@ namespace WebAp.Repositories
             return bill;
         }
 
+        public MessagePage GetMessagePageByClient(Client clientId)
+        {
+            RepositoryFactory factory = new RepositoryFactory(context);
+            MessagePage message = new MessagePage();
+            message.Buildings = factory.Create<IBuildingRepository>().GetAll();
+            message.Clients = factory.Create<IClientRepository>().GetAllClients();
+            message.Client = clientId;
+            message.Bills = factory.Create<IBillRepository>().GetAll();
+            message.Items = factory.Create<IItemRepository>().GetAll();
+            message.Messages = factory.Create<IMessageRepository>().GetAllMessages();
+            return message;
+        }
     }
 }

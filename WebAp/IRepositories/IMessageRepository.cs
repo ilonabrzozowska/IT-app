@@ -7,7 +7,5 @@ namespace WebAp.IRepositories
     {
         Message GetMessageById(int messageId);
         IEnumerable<Message> GetAllMessages();
-
-        //IEnumerable<Client> GetAllMessages(); 
     }
 }
