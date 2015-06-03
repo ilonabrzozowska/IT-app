@@ -5,11 +5,11 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAp", "WebAp\WebAp.csproj", "{884612A4-F9E5-4528-B92D-EB494E35C5BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication", "WpfApplication\WpfApplication.csproj", "{B220E380-2F96-4E4B-B2F9-016A7EB53306}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{7DBB50AE-1F70-4C52-96C8-1F8FF17627AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{79CACAE7-ABF3-4C26-A501-E73BEA4F5372}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication", "WpfApplication\WpfApplication.csproj", "{B220E380-2F96-4E4B-B2F9-016A7EB53306}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{884612A4-F9E5-4528-B92D-EB494E35C5BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{884612A4-F9E5-4528-B92D-EB494E35C5BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{884612A4-F9E5-4528-B92D-EB494E35C5BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B220E380-2F96-4E4B-B2F9-016A7EB53306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B220E380-2F96-4E4B-B2F9-016A7EB53306}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B220E380-2F96-4E4B-B2F9-016A7EB53306}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B220E380-2F96-4E4B-B2F9-016A7EB53306}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7DBB50AE-1F70-4C52-96C8-1F8FF17627AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7DBB50AE-1F70-4C52-96C8-1F8FF17627AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DBB50AE-1F70-4C52-96C8-1F8FF17627AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{79CACAE7-ABF3-4C26-A501-E73BEA4F5372}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79CACAE7-ABF3-4C26-A501-E73BEA4F5372}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79CACAE7-ABF3-4C26-A501-E73BEA4F5372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B220E380-2F96-4E4B-B2F9-016A7EB53306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B220E380-2F96-4E4B-B2F9-016A7EB53306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B220E380-2F96-4E4B-B2F9-016A7EB53306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B220E380-2F96-4E4B-B2F9-016A7EB53306}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

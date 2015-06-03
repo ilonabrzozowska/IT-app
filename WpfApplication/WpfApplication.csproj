@@ -76,7 +76,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ModelView.cs" />
+    <Compile Include="ModelViews\BillsModelViews\BillsModelView.cs" />
     <Compile Include="ModelViews\ClientModelViews\ClientModelView.cs" />
+    <Compile Include="UI\BillsUI\BillsHome.xaml.cs">
+      <DependentUpon>BillsHome.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\BuildingUI\EditBuilding.xaml.cs">
       <DependentUpon>EditBuilding.xaml</DependentUpon>
     </Compile>
@@ -93,6 +97,10 @@
     <Compile Include="UI\BuildingUI\BuildingHome.xaml.cs">
       <DependentUpon>BuildingHome.xaml</DependentUpon>
     </Compile>
+    <Page Include="UI\BillsUI\BillsHome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UI\BuildingUI\EditBuilding.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -177,6 +185,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
