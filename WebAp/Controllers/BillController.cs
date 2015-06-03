@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using DataLayer.Models;
-using WebAp.Models;
 using WebAp.ModelsView;
 using WebAp.Repositories;
 using WebAp.IRepositories;

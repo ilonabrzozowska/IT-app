@@ -13,7 +13,7 @@ namespace DataLayer.Models
         [DataMember, Key, Required]
         public int ClientId { get; set; }
 
-        [DataMember, MaxLength(32), Required]
+        [DataMember, MaxLength(32)]
         public string Password { get; set; }
 
         [DataMember, MaxLength(63), Required]
@@ -28,7 +28,7 @@ namespace DataLayer.Models
         [DataMember, MaxLength(15)]
         public string FlatNumber { get; set; }
 
-        [DataMember, Required]
+        [DataMember]
         public int BuildingId { get; set; }
 
         [DataMember, MaxLength(15)]

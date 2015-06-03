@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace DataLayer.Models
 {
-    public class ThreeTierInitializer : DropCreateDatabaseAlways<ThreeTierContext>
+    public class ThreeTierInitializer : DropCreateDatabaseIfModelChanges<ThreeTierContext>
     {
 
 

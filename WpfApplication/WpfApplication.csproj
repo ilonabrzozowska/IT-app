@@ -169,17 +169,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ThreeTier\BusinessLayer\BusinessLayer.csproj">
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
       <Project>{79cacae7-abf3-4c26-a501-e73bea4f5372}</Project>
       <Name>BusinessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ThreeTier\DataLayer\DataLayer.csproj">
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
       <Project>{7dbb50ae-1f70-4c52-96c8-1f8ff17627af}</Project>
       <Name>DataLayer</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

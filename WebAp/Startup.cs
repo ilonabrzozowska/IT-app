@@ -2,10 +2,6 @@
 using Owin;
 using System.Data.Entity;
 using DataLayer.Models;
-//using Service.Models;
-using WebAp.Models;
-
-
 
 [assembly: OwinStartupAttribute(typeof(WebAp.Startup))]
 
