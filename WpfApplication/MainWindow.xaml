@@ -16,6 +16,7 @@
             <Button Content="Home" Click="Home_Click" Height="35"></Button>
             <Button Content="Buildings" Click="Buildings_Click" Height="35"></Button>
             <Button Content="Clients" Click="Clients_Click" Height="35" />
+            <Button Content="Bills" Click="Bills_Click" Height="35" />
         </StackPanel>
         <!--<TextBox Grid.Column="1" Height="536.606" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Grid.RowSpan="2" />-->
         <WrapPanel Grid.Column="1" Height="28" HorizontalAlignment="Right"  Name="wrapPanel1" VerticalAlignment="Top" Width="776.625" FlowDirection="RightToLeft" DataContext="{Binding}" Cursor="Cross" MouseDown="wrapPanel1_MouseDown" MouseUp="wrapPanel1_MouseUp" MouseMove="wrapPanel1_MouseMove">

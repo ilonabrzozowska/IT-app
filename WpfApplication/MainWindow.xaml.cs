@@ -16,6 +16,7 @@ using WpfApplication.UI.BuildingUi;
 using WpfApplication.UI.Home;
 using WpfApplication.UI.ClientUI;
 using WpfApplication.ModelViews;
+using WpfApplication.UI.BillsUI;
 
 namespace WpfApplication
 {
@@ -56,6 +57,11 @@ namespace WpfApplication
         private void Clients_Click(object sender, RoutedEventArgs e)
         {
             this.contentControl.Content = new ClientHome();
+        }
+
+        private void Bills_Click(object sender, RoutedEventArgs e)
+        {
+            contentControl.Content = new BillsHome();
         }
 
         private void wrapPanel1_MouseDown(object sender, MouseButtonEventArgs e)
