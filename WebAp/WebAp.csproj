@@ -181,6 +181,7 @@
     <Compile Include="ModelsView\BuildingPage.cs" />
     <Compile Include="ModelsView\HomeClient.cs" />
     <Compile Include="ModelsView\HomePage.cs" />
+    <Compile Include="ModelsView\MessagePage.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

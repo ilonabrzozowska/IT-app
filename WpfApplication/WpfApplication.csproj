@@ -76,11 +76,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ModelView.cs" />
-    <Compile Include="ModelViews\BillsModelViews\BillsModelView.cs" />
     <Compile Include="ModelViews\ClientModelViews\ClientModelView.cs" />
-    <Compile Include="UI\BillsUI\BillsHome.xaml.cs">
-      <DependentUpon>BillsHome.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UI\BuildingUI\EditBuilding.xaml.cs">
       <DependentUpon>EditBuilding.xaml</DependentUpon>
     </Compile>
@@ -97,10 +93,6 @@
     <Compile Include="UI\BuildingUI\BuildingHome.xaml.cs">
       <DependentUpon>BuildingHome.xaml</DependentUpon>
     </Compile>
-    <Page Include="UI\BillsUI\BillsHome.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="UI\BuildingUI\EditBuilding.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -169,9 +161,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
       <Project>{79cacae7-abf3-4c26-a501-e73bea4f5372}</Project>
       <Name>BusinessLayer</Name>
@@ -180,6 +169,13 @@
       <Project>{7dbb50ae-1f70-4c52-96c8-1f8ff17627af}</Project>
       <Name>DataLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WcfService1\Service.csproj">
+      <Project>{b741fce8-afbe-4efa-9075-df254f270f2f}</Project>
+      <Name>Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
