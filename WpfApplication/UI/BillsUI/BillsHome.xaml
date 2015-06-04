@@ -44,9 +44,14 @@
             </DataGrid.Columns>           
         </DataGrid>
         <WrapPanel Height="100" HorizontalAlignment="Stretch" Name="wrapPanel1" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0" UseLayoutRounding="True">
-            <Button Content="Actual Month" Name="buttonActualMonth" Width="150" VerticalAlignment="Stretch" Height="100" Background="#FFB10000" Click="buttonActualMonth_Click" />
-            <Button Background="#FFB10000" Content="Previous Months" x:Name="buttonPreviousMonths" Width="150"  Height="100" VerticalAlignment="Stretch" Click="buttonPreviousMonths_Click"  />
-            <Button Content="Add bill" Name="buttonAddBill" Click="buttonAddBill_Click" Width="150" VerticalAlignment="Stretch" Height="100" Background="#FFB10000"/>
+            <Button Content="Display Clients" Foreground="FloralWhite" Name="buttonActualMonth" Width="150" VerticalAlignment="Stretch" Height="100" Click="buttonActualMonth_Click" FontSize="18" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1E971E" Offset="0"/>
+                        <GradientStop Color="#FF037A03" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </WrapPanel>
     </Grid>
 </UserControl>

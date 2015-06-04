@@ -41,7 +41,7 @@ namespace WpfApplication.UI.ClientUI
             DataContext = modelView;
         }
 
-        private void buttonDownload_Click(object sender, RoutedEventArgs e)
+        private void buttonDisplay_Click(object sender, RoutedEventArgs e)
         {
             _clientList = Service.GetAllClients();
             client.ItemsSource = Service.GetAllClients();

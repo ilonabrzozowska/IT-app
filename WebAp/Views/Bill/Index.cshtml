@@ -33,10 +33,10 @@
                     else {
                         <p class="period">Bills for @month.@year</p>
                     }
-                    <table class="billTable sortable">
+                    <table id="top-table" class="table our_table sortable">
                         <thead>
                             <tr>
-                                <th>Bill ID</th>
+                                @*<th>Bill ID</th>*@
                                 <th>Item name</th>
                                 <th>Quantity</th>
                                 <th>Price per unit</th>
@@ -47,26 +47,27 @@
                         </thead>
                         <tbody>
                             @{
-                                foreach (var bill in currentMonthBills)
-                                {
-                                    var itemOnBill = (from item in Model.Items
-                                                      where item.ItemId == bill.ItemId
-                                                      select item)
-                                                      .FirstOrDefault();
-                                    var totalPrice = @bill.Quantity * @itemOnBill.PricePerUnit;
-                                    <tr>
-                                        <td>@bill.BillId</td>
-                                        <td>@itemOnBill.Name</td>
-                                        <td>@bill.Quantity</td>
-                                        <td>@itemOnBill.PricePerUnit</td>
-                                        <td>@totalPrice</td>
-                                        <td>@bill.DateIssue.ToString("d")</td>
-                                        <td>@bill.PayDate.ToString("d")</td>
-                                    </tr>
-                                }
+                foreach (var bill in currentMonthBills)
+                {
+                    var itemOnBill = (from item in Model.Items
+                                      where item.ItemId == bill.ItemId
+                                      select item)
+                                      .FirstOrDefault();
+                    var totalPrice = @bill.Quantity * @itemOnBill.PricePerUnit;
+                    <tr>
+                        @*<td>@bill.BillId</td>*@
+                        <td>@itemOnBill.Name</td>
+                        <td>@bill.Quantity</td>
+                        <td>@itemOnBill.PricePerUnit</td>
+                        <td>@totalPrice</td>
+                        <td>@bill.DateIssue.ToString("d")</td>
+                        <td>@bill.PayDate.ToString("d")</td>
+                    </tr>
+                }
                             }
                         </tbody>
                     </table>
+
                 </div>
             }
         }
@@ -75,9 +76,9 @@
 
 <script>
     $(document).ready(function () {
-        $(".billTable").hide();
+        $(".our_table").hide();
         $(".period").click(function () {
-            $(this).siblings(".billTable").toggle();
+            $(this).siblings(".our_table").toggle();
         })
     })
 </script>

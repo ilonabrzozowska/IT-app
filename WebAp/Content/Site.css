@@ -1,6 +1,6 @@
 ﻿body {
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -15,3 +15,54 @@ select,
 textarea {
     max-width: 280px;
 }
+#top_table {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+    #top_table th {
+        font-weight: bold;
+        text-align: center;
+        vertical-align: bottom;
+        height: 100px;
+    }
+
+    #top_table .shortname {
+        background-color:black;
+        color: #ffffff;
+    }
+
+
+table.our_table {
+        display: table;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .our_table td {
+        text-align: center;
+    }
+
+    table.our_table, th, td {
+        padding: 2px;
+        text-align: center;
+        vertical-align: inherit;
+        line-height: 1.42857;
+        max-height: 1024px;
+        
+    }
+    .our_table th {
+        text-align: center;
+        background-color:darkgreen;
+        color: #ffffff;
+        border: 0px;
+    }
+    
+    .our_table tr:nth-child(2n+1) td {
+        background-color: #F0F0F0 ;
+    }
+
+    .our_table tr:nth-child(2n) td {
+        background-color: #ffffff;
+    }    
+

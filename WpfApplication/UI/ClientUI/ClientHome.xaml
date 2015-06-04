@@ -26,15 +26,29 @@
             </DataGrid.Columns>
             <DataGrid.ContextMenu>
                 <ContextMenu>
-                   <MenuItem Command="Delete" Click="MenuItemDelete_Click"></MenuItem>
+                    <MenuItem Command="Delete" Click="MenuItemDelete_Click"></MenuItem>
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
 
 
         <WrapPanel Height="100" HorizontalAlignment="Stretch" Name="wrapPanel1" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0" UseLayoutRounding="True">
-            <Button Content="Add" Name="buttonAdd" Width="150" VerticalAlignment="Stretch" Height="100" Background="#FFB10000" Click="buttonAdd_Click" />
-            <Button Background="#FFB10000" Content="Download" x:Name="buttonDownload" Width="150"  Height="100" VerticalAlignment="Stretch" Click="buttonDownload_Click"  />
+            <Button Content="Add" Name="buttonAdd" Width="150" VerticalAlignment="Stretch" Height="100" Click="buttonAdd_Click" Foreground="White" FontSize="18" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1E971E" Offset="0"/>
+                        <GradientStop Color="#FF037A03" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="Display" x:Name="buttonDisplay" Width="150"  Height="100" VerticalAlignment="Stretch" Click="buttonDisplay_Click" Foreground="White" FontSize="18"  >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1E971E" Offset="0"/>
+                        <GradientStop Color="#FF037A03" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </WrapPanel>
     </Grid>
 </UserControl>

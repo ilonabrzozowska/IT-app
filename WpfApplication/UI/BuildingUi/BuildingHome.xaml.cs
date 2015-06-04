@@ -52,7 +52,7 @@ namespace WpfApplication.UI.BuildingUi
             modelView.ShowNewBuilding();
         }
 
-        private void Download_Click(object sender, RoutedEventArgs e)
+        private void Display_Click(object sender, RoutedEventArgs e)
         {
             _buildingList = Service.GetAllBuildings();
             build.ItemsSource = Service.GetAllBuildings();

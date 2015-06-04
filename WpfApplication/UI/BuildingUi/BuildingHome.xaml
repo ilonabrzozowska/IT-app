@@ -33,8 +33,22 @@
     
 
     <WrapPanel Height="100" HorizontalAlignment="Stretch" Name="wrapPanel1" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0" UseLayoutRounding="True">
-            <Button Content="Add" Name="buttonAdd" Width="150" VerticalAlignment="Stretch" Height="100" Background="#FFB10000" Click="buttonAdd_Click" />
-            <Button Content="Download" Background="#FFB10000" Name="Download" Width="150"  Height="100" VerticalAlignment="Stretch" Click="Download_Click" />
+            <Button Content="Add" Name="buttonAdd" Width="150" VerticalAlignment="Stretch" Height="100" Click="buttonAdd_Click" FontSize="18" Foreground="White" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1E971E" Offset="0"/>
+                        <GradientStop Color="#FF037A03" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="Display" Name="Display" Width="150"  Height="100" VerticalAlignment="Stretch" Click="Display_Click" Foreground="White" FontSize="18" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1E971E" Offset="0"/>
+                        <GradientStop Color="#FF037A03" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </WrapPanel>
     </Grid>
 </UserControl>
