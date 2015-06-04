@@ -30,46 +30,56 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetCore.Core">
-      <HintPath>..\..\WebAp\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\DotNetCore.Core.dll</HintPath>
+    <Reference Include="DotNetCore.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\DotNetCore.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetCore.Data.EntityFramework">
-      <HintPath>..\..\WebAp\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\DotNetCore.Data.EntityFramework.dll</HintPath>
+    <Reference Include="DotNetCore.Data.EntityFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\DotNetCore.Data.EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\..\WebAp\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\EntityFramework.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\WebAp\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
-      <HintPath>..\..\WebAp\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <HintPath>..\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
-      <HintPath>..\..\WebAp\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Owin">
-      <HintPath>..\..\WebAp\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Microsoft.AspNet.Identity.Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin">
-      <HintPath>..\..\WebAp\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Microsoft.Owin.dll</HintPath>
+    <Reference Include="Microsoft.Owin, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Microsoft.Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security">
-      <HintPath>..\..\WebAp\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Microsoft.Owin.Security.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Microsoft.Owin.Security.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security.Cookies">
-      <HintPath>..\..\WebAp\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Microsoft.Owin.Security.Cookies.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security.OAuth">
-      <HintPath>..\..\WebAp\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Microsoft.Owin.Security.OAuth.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\WebAp\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Owin">
-      <HintPath>..\..\WebAp\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Owin.dll</HintPath>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetCore.Data.EntityFramework.1.1.0\lib\Owin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />

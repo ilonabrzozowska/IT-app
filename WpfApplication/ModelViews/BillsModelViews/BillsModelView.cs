@@ -15,7 +15,7 @@ namespace WpfApplication.ModelViews.BillsModelViews
 
         private List<Bill> _billList;
         private Bill _newBill;
-        
+
 
         public List<Bill> BillList
         {
@@ -54,7 +54,25 @@ namespace WpfApplication.ModelViews.BillsModelViews
 
         public void ShowNewBill()
         {
-            EditBill newBill = new EditBill(this);
+            EditBill newBill = new EditBill(this);            
+            newBill.ShowDialog();
+        }
+
+        public void ShowNewBillWater()
+        {
+            EditBillWater newBill = new EditBillWater(this);
+            newBill.ShowDialog();
+        }
+
+        public void ShowNewBillGas()
+        {
+            EditBillGas newBill = new EditBillGas(this);
+            newBill.ShowDialog();
+        }
+
+        public void ShowNewBillRent()
+        {
+            EditBillRent newBill = new EditBillRent(this);
             newBill.ShowDialog();
         }
 
@@ -66,6 +84,7 @@ namespace WpfApplication.ModelViews.BillsModelViews
 
         public void AddNewBill()
         {
+         //   NewBill.ItemId = EditBill
             NewBill = Service.AddBill(NewBill);
             if (NewBill.BillId != null)
             {

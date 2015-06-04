@@ -48,6 +48,11 @@ namespace BusinessLayer
             return Provider.GetAllBills();
         }
 
+        public static List<Item> GetAllItems()
+        {
+            return Provider.GetAllItems();
+        }
+
         public static Bill AddBill(Bill newBill)
         {
             return Provider.AddBill(newBill);

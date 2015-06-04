@@ -81,6 +81,15 @@
     <Compile Include="UI\BillsUI\BillsHome.xaml.cs">
       <DependentUpon>BillsHome.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\BillsUI\EditBillGas.xaml.cs">
+      <DependentUpon>EditBillGas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillsUI\EditBillRent.xaml.cs">
+      <DependentUpon>EditBillRent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillsUI\EditBillWater.xaml.cs">
+      <DependentUpon>EditBillWater.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\BillsUI\EditBill.xaml.cs">
       <DependentUpon>EditBill.xaml</DependentUpon>
     </Compile>
@@ -101,6 +110,18 @@
       <DependentUpon>BuildingHome.xaml</DependentUpon>
     </Compile>
     <Page Include="UI\BillsUI\BillsHome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\BillsUI\EditBillGas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\BillsUI\EditBillRent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\BillsUI\EditBillWater.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -183,10 +204,6 @@
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">
       <Project>{7dbb50ae-1f70-4c52-96c8-1f8ff17627af}</Project>
       <Name>DataLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WcfService1\Service.csproj">
-      <Project>{b741fce8-afbe-4efa-9075-df254f270f2f}</Project>
-      <Name>Service</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

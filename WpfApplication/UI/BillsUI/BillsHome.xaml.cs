@@ -23,7 +23,7 @@ namespace WpfApplication.UI.BillsUI
     /// </summary>
     public partial class BillsHome : UserControl
     {
-
+   //     private List<Client> _clientList;
         BillsModelView modelView;
 
         public BillsHome()
@@ -42,10 +42,7 @@ namespace WpfApplication.UI.BillsUI
 
         private void buttonActualMonth_Click(object sender, RoutedEventArgs e)
         {
-            // display list of clients from actual month with status of payment
-            // status: to settle
-            //         settled
-            //         paid
+            client.ItemsSource = Service.GetAllClients();
         }
 
         private void buttonPreviousMonths_Click(object sender, RoutedEventArgs e)
@@ -54,8 +51,23 @@ namespace WpfApplication.UI.BillsUI
         }
 
         private void buttonAddBill_Click(object sender, RoutedEventArgs e)
-        {
+        {          
             modelView.ShowNewBill();
         }
+
+        private void buttonAddBillWater_Click(object sender, RoutedEventArgs e)
+        {
+            modelView.ShowNewBillWater();
+        }
+        private void buttonAddBillGas_Click(object sender, RoutedEventArgs e)
+        {
+            modelView.ShowNewBillGas();
+        } 
+
+        private void buttonAddBillRent_Click(object sender, RoutedEventArgs e)
+        {
+            modelView.ShowNewBillRent();
+        }
+        
     }
 }

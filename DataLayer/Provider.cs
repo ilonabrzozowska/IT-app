@@ -14,10 +14,7 @@ using DataLayer.Models;
 namespace DataLayer
 {
     public class Provider
-    {
-        private static string con =
-            @"Data Source=(LocalDb)\Projects;Initial Catalog=DataLayer.ThreeTier;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework;";
-
+    {        
         public static List<Client> GetAllClients()
         {
             List<Client> lst = null;
@@ -83,8 +80,16 @@ namespace DataLayer
             return lst;
         }
 
+        public static List<Item> GetAllItems()
+        {
+            List<Item> lst = null;
+            lst = (from a in Db.Table.Items select a).ToList();
+            return lst;
+        } 
+
         public static Bill AddBill(Bill newBill)
         {
+            
             Db.Table.Bills.Add(newBill);
             Db.Table.SaveChanges();
             Submit();
